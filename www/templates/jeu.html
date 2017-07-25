@@ -1,0 +1,18 @@
+     <div class="titre">{{jeu.titre}}</div>
+      <!--  <div drag-and-drop class="drag-container plateau_jeu" on-drag-enter="jeu.dragEnter(draggable, droppable)" on-item-placed="jeu.dragEnd(draggable, droppable)" on-drag-leave="jeu.dragLeave(draggable, droppable)">
+          <drop-spot class="cercle" drop-id="1"><div drag-item drag-enabled="true" class="drag-item cercle_rouge" drag-id="1"></div></drop-spot>
+          <drop-spot class="cercle" drop-id="2"><div drag-item drag-enabled="true" class="drag-item cercle_rouge" drag-id="2" drop-id="2"></div></drop-spot>
+          <drop-spot class="cercle" drop-id="3"><div drag-item drag-enabled="true" class="drag-item cercle_rouge" drag-id="3" ></div></drop-spot>
+          <drop-spot class="cercle" drop-id="4"></drop-spot>
+          <div class="cercle"><div drag-item drag-enabled="true" class="drag-item cercle_bleu" drag-id="5" drop-id="5"></div></div>
+          <div class="cercle"><div drag-item drag-enabled="true" class="drag-item cercle_bleu" drag-id="6" drop-id="6"></div></div>
+          <div class="cercle"><div drag-item drag-enabled="true" class="drag-item cercle_bleu" drag-id="7" drop-id="7"></div></div>
+      </div>-->
+<div class="plateau_jeu" ng-init="c=0;p=0">
+  <div class="cercle" ng-repeat="cer in jeu.TypeCercle track by $index" 
+    ng-click="jeu.placement_click($index)">
+    <div ng-show="cer == 0" class="cercle_rouge" ng-class="{'cercle_choisi' : $index == jeu.selectedCercle}" ng-click="jeu.CercleClicked($index)"></div>
+    <div ng-show="cer == 1" class="cercle_bleu" ng-class="{'cercle_choisi' : $index == jeu.selectedCercle}" ng-click="jeu.CercleClicked($index)"></div>
+  </div>
+  </div>
+  <div class="message">{{jeu.message}}</div>

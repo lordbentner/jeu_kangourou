@@ -1,0 +1,46 @@
+/* Empty. Add your own CSS if you like */
+
+.titre {
+	text-align: center;
+}
+
+.cercle, .cercle_rouge , .cercle_bleu{
+  background:yellow;
+  border-radius:50%;
+  width:50%;
+  height:50%;
+  border:2px solid #679403;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cercle_rouge {
+	background:red;
+	width:90%;
+  	height:90%;
+}
+
+.cercle_bleu {
+	background:blue;
+	width:90%;
+  	height:90%;
+}
+
+.cercle_choisi {
+	border:5px solid black;
+}
+
+
+.plateau_jeu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50%;
+	width : 100%;
+}
+
+.message {
+	text-align: center;
+	color : red;
+}
