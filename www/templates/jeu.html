@@ -10,9 +10,9 @@
       </div>-->
 <div class="plateau_jeu" ng-init="c=0;p=0">
   <div class="cercle" ng-repeat="cer in jeu.TypeCercle track by $index" 
-    ng-click="jeu.placement_click($index)">
-    <div ng-show="cer == 0" class="cercle_rouge" ng-class="{'cercle_choisi' : $index == jeu.selectedCercle}" ng-click="jeu.CercleClicked($index)"></div>
-    <div ng-show="cer == 1" class="cercle_bleu" ng-class="{'cercle_choisi' : $index == jeu.selectedCercle}" ng-click="jeu.CercleClicked($index)"></div>
+    ng-click="jeu.placement_click($index)" ng-class="{'cercle_choisi' : $index == jeu.selectedCercle}">
+    <img ng-show="cer == 0" ng-src="img/kangouroumarron.png" ng-click="jeu.CercleClicked($index)" />
+    <img ng-show="cer == 1" ng-src="img/kangouroubleu.png" ng-click="jeu.CercleClicked($index)" />
   </div>
   </div>
   <div class="message">{{jeu.message}}</div>

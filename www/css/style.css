@@ -4,7 +4,7 @@
 	text-align: center;
 }
 
-.cercle, .cercle_rouge , .cercle_bleu{
+.cercle, .cercle_rouge .cercle_bleu{
   background:yellow;
   border-radius:50%;
   width:50%;
@@ -15,20 +15,30 @@
   justify-content: center;
 }
 
-.cercle_rouge {
-	background:red;
-	width:90%;
-  	height:90%;
+.cercle img{
+	height: 85%;
+	width: 85%;
+	transition: all linear 0.5s;
+  	opacity:1;
 }
 
-.cercle_bleu {
-	background:blue;
-	width:90%;
-  	height:90%;
+.cercle img.ng-hide{
+  opacity: 0;
+  transition: all linear 0.5s;
+}
+
+@keyframes example {
+    0% {opacity: 0;
+    }
+    50% {opacity: 0.5;
+    }
+    100%{opacity: 1;
+    }
 }
 
 .cercle_choisi {
 	border:5px solid black;
+	border-radius:50%;
 }
 
 
